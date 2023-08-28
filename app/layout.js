@@ -2,9 +2,6 @@
 import Navbar from '@/app/components/Navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 
 
@@ -17,13 +14,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-   useEffect(() => {
-    AOS.init({
-      easing: "ease-out-cubic",
-      once: true,
-      offset: 10,
-    });
-  }, []);
+   
   return (
     <html lang="en" className='scroll-smooth' style={{scrollBehavior:'smooth'}}>
       <body className={inter.className}>
